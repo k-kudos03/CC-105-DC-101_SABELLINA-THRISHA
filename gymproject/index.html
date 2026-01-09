@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GymFlow PH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div id="auth-section" class="card" style="max-width: 400px; margin: auto;">
+            <h1 class="brand">GymFlow<span>.PH</span></h1>
+            <div id="login-form">
+                <form id="frmLogin">
+                    <label>Email</label><input type="email" name="email" required>
+                    <label>Password</label><input type="password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>New member? <a href="#" onclick="toggleAuth(true)">Register here</a></p>
+            </div>
+            <div id="reg-form" style="display:none;">
+                <form id="frmReg">
+                    <label>Full Name</label><input type="text" name="full_name" required>
+                    <label>Email</label><input type="email" name="email" required>
+                    <label>Password</label><input type="password" name="password" required>
+                    <label>Plan</label>
+                    <select name="plan_id">
+                        <option value="1">Student (₱800)</option>
+                        <option value="2">Regular (₱1,500)</option>
+                        <option value="3">Elite (₱3,500)</option>
+                    </select>
+                    <button type="submit">Join Gym</button>
+                </form>
+                <p><a href="#" onclick="toggleAuth(false)">Back to Login</a></p>
+            </div>
+        </div>
+
+        <div id="dashboard-section" class="card" style="display:none; width: 90%; max-width: 800px; margin: auto;">
+            <header>
+                <h2>Mabuhay, <span id="userName" style="color:var(--blue)">User</span>!</h2>
+                <button onclick="logout()" class="btn-outline">Logout</button>
+            </header>
+            <div class="checkin-area">
+                <button onclick="checkIn()" id="btnCheckIn">📍 Record Daily Session</button>
+                <p id="msg"></p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat"><h3>Visits</h3><p id="days">0</p></div>
+                <div class="stat"><h3>Fee</h3><p id="fee">₱0</p></div>
+                <div class="stat"><h3>Tier</h3><p id="tier">-</p></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

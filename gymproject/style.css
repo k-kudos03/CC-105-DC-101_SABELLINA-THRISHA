@@ -1,0 +1,12 @@
+:root { --navy: #0f172a; --blue: #3b82f6; --bg: #f8fafc; }
+body { font-family: sans-serif; background: var(--navy); margin: 0; }
+.app-wrapper { display: flex; min-height: 100vh; padding: 20px; }
+.card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.brand { text-align: center; margin-bottom: 20px; }
+.brand span { color: var(--blue); }
+label { display: block; margin: 10px 0 5px; font-size: 0.8rem; color: #64748b; }
+input, select, button { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; }
+button { background: var(--blue); color: white; border: none; cursor: pointer; font-weight: bold; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+.stat { background: var(--bg); padding: 15px; border-radius: 10px; text-align: center; }
+.btn-outline { background: none; border: 1px solid red; color: red; width: auto; }
